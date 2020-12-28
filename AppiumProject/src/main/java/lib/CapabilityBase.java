@@ -94,8 +94,8 @@ public class CapabilityBase {
 
 		capability.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE, ChromeDriver);
 
-		capability.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "org.khanacademy.android");        
-		capability.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "org.khanacademy.android.ui.library.MainActivity");
+		capability.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.androidsample.generalstore");        
+		capability.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.androidsample.generalstore.SplashActivity");
 
 		
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://0.0.0.0:4723/wd/hub"),capability);
