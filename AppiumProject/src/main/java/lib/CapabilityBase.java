@@ -78,7 +78,7 @@ public class CapabilityBase {
 		appPackage = "org.khanacademy.android";
 		appActivity = "org.khanacademy.android.ui.library.MainActivity";
 		deviceName = "sdk_gphone_x86";
-		ChromeDriver = System.getProperty("user.dir") + "//src//main/resources//chromedriver.exe";		
+		ChromeDriver = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";		
 		platformName = "Android";
 				
 		if (deviceName.contains("sdk_gphone_x86")) {
