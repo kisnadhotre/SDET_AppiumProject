@@ -25,7 +25,7 @@ public class FirstTest extends CapabilityBase {
 	
 		service = startserver();
 		Thread.sleep(5000);	
-		driver = driverSetUp(appPackage, appActivity, deviceName, ChromeDriver, platformName);
+		driver = driverSetUp(appPackage, appActivity, deviceName, ChromeDriverPath, platformName);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 28 09:48:02 IST 2020</td>
+<td>Started on:</td><td>Mon Dec 28 13:05:01 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>96 seconds (96852 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7447 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,9 +75,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testsuites.KhanTest.tearDown()'><b>tearDown</b><br>Test class: testsuites.KhanTest</td>
+<td title='testsuites.FirstTest.setUp()'><b>setUp</b><br>Test class: testsuites.FirstTest</td>
 <td><div><pre>java.lang.NullPointerException
-	at testsuites.KhanTest.tearDown(KhanTest.java:65)
+	at lib.CapabilityBase.driverSetUp(CapabilityBase.java:90)
+	at testsuites.FirstTest.setUp(FirstTest.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -86,8 +87,8 @@ function toggleAllBoxes() {
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.afterRun(TestRunner.java:1021)
-	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -100,9 +101,10 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace472826986", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace472826986'><pre>java.lang.NullPointerException
-	at testsuites.KhanTest.tearDown(KhanTest.java:65)
+</pre></div><a href='#' onClick='toggleBox("stack-trace-714892196", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace-714892196'><pre>java.lang.NullPointerException
+	at lib.CapabilityBase.driverSetUp(CapabilityBase.java:90)
+	at testsuites.FirstTest.setUp(FirstTest.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,8 +113,8 @@ function toggleAllBoxes() {
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.afterRun(TestRunner.java:1021)
-	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -129,18 +131,31 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>null</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testsuites.KhanTest.selectLanguageTest()'><b>selectLanguageTest</b><br>Test class: testsuites.KhanTest</td>
+<td title='testsuites.FirstTest.tearDown()'><b>tearDown</b><br>Test class: testsuites.FirstTest</td>
 <td></td>
-<td>33</td>
-<td>testsuites.KhanTest@de70297d</td></tr>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testsuites.FirstTest.oneTest()'><b>oneTest</b><br>Test class: testsuites.FirstTest</td>
+<td></td>
+<td>0</td>
+<td>testsuites.FirstTest@288527b0</td></tr>
 </table><p>
 </body>
 </html>

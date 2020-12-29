@@ -22,7 +22,7 @@ public class CapabilityBase {
 	protected String appPackage;
 	protected String appActivity;
 	protected String deviceName;
-	protected String ChromeDriver;
+	protected String ChromeDriverPath;
 	protected String platformName;
 	
 	public AppiumDriverLocalService service;
@@ -70,16 +70,22 @@ public class CapabilityBase {
 	
 	public static AndroidDriver<AndroidElement> driverSetUp(String appPackage, String appActivity, String deviceName, String ChromeDriver, String platformName) throws Exception {
 		
-		
-//		FileReader inStream = new FileReader("C:\\Users\\KrishnaDhotre\\Documents\\appium_workspace\\AppiumProject\\src\\main\\resources\\global.properties");
-//		Properties prop = new Properties();
-//		prop.load(inStream);
+		//String propPath = System.getProperty("user.dir") + "\\src\\main\\resources\\global.properties";
+		//FileReader inStream = new FileReader(propPath);
+		//Properties prop = new Properties();
+		//prop.load(inStream);
 			
-		appPackage = "org.khanacademy.android";
-		appActivity = "org.khanacademy.android.ui.library.MainActivity";
-		deviceName = "sdk_gphone_x86";
-		ChromeDriver = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";		
-		platformName = "Android";
+		
+		//appPackage = com.androidsample.generalstore
+		//appActivity = com.androidsample.generalstore.SplashActivity
+		//appPackage = "org.khanacademy.android";
+		//appActivity = "org.khanacademy.android.ui.library.MainActivity";
+		
+		//appPackage = prop.getProperty(appPackage);
+		//appActivity = prop.getProperty(appActivity);
+		//deviceName = prop.getProperty(deviceName);
+		//ChromeDriverPath = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";		
+		//platformName = prop.getProperty(platformName);
 				
 		if (deviceName.contains("sdk_gphone_x86")) {
 			startEmulator();
@@ -92,7 +98,7 @@ public class CapabilityBase {
 		capability.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capability.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
 
-		capability.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE, ChromeDriver);
+		capability.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE, System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe");
 
 		capability.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.androidsample.generalstore");        
 		capability.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.androidsample.generalstore.SplashActivity");

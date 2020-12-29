@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-28T04:18:02Z" name="Default suite" finished-at="2020-12-28T04:19:38Z" duration-ms="96852">
+  <suite started-at="2020-12-28T07:35:01Z" name="Default suite" finished-at="2020-12-28T07:35:08Z" duration-ms="7447">
     <groups>
     </groups>
-    <test started-at="2020-12-28T04:18:02Z" name="Default test" finished-at="2020-12-28T04:19:38Z" duration-ms="96852">
-      <class name="testsuites.KhanTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testsuites.KhanTest@de70297d]" started-at="2020-12-28T09:48:02Z" name="setUp" finished-at="2020-12-28T09:49:05Z" duration-ms="63589" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="selectLanguageTest()[pri:0, instance:testsuites.KhanTest@de70297d]" started-at="2020-12-28T09:49:05Z" name="selectLanguageTest" finished-at="2020-12-28T09:49:38Z" duration-ms="33215" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectLanguageTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testsuites.KhanTest@de70297d]" started-at="2020-12-28T09:49:38Z" name="tearDown" finished-at="2020-12-28T09:49:38Z" duration-ms="0" status="FAIL">
+    <test started-at="2020-12-28T07:35:01Z" name="Default test" finished-at="2020-12-28T07:35:08Z" duration-ms="7447">
+      <class name="testsuites.FirstTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testsuites.FirstTest@288527b0]" started-at="2020-12-28T13:05:01Z" name="setUp" finished-at="2020-12-28T13:05:01Z" duration-ms="0" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at testsuites.KhanTest.tearDown(KhanTest.java:65)
+	at lib.CapabilityBase.driverSetUp(CapabilityBase.java:90)
+	at testsuites.FirstTest.setUp(FirstTest.java:28)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -28,8 +21,8 @@
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.afterRun(TestRunner.java:1021)
-	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -47,8 +40,16 @@
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="oneTest()[pri:0, instance:testsuites.FirstTest@288527b0]" started-at="2020-12-28T13:05:08Z" name="oneTest" finished-at="2020-12-28T13:05:08Z" duration-ms="1" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testsuites.FirstTest@288527b0]" started-at="2020-12-28T13:05:08Z" name="tearDown" finished-at="2020-12-28T13:05:08Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testsuites.KhanTest -->
+      </class> <!-- testsuites.FirstTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

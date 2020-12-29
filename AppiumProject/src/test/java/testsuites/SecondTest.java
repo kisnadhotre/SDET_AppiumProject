@@ -22,7 +22,7 @@ public class SecondTest extends CapabilityBase {
 	
 		service = startserver();
 		Thread.sleep(9000);	
-		driver = driverSetUp(appPackage, appActivity, deviceName, ChromeDriver, platformName);
+		driver = driverSetUp(appPackage, appActivity, deviceName, ChromeDriverPath, platformName);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
