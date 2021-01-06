@@ -45,7 +45,7 @@ public class KhanTest extends CapabilityBase {
 	}
 	
 	
-	@Test(enabled = true, priority = 2)
+	@Test(enabled = true, priority = 3)
 	public  void signInTest() {
 		
 		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"org.khanacademy.android:id/content_root\")).getChildByText(new UiSelector().className(\"android.widget.TextView\"),\"Sign in\")").click();
@@ -76,34 +76,35 @@ public class KhanTest extends CapabilityBase {
 		driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"org.khanacademy.android:id/action_bar_root\").getChildByText(new UiSelector().className(\"android.widget.TextView\"),\"CREATE\")").click();
 		
 		
-		//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Afghanistan\"))").click();
 		
 		
 		
 	}
 
 
-	@Test(enabled = false)
+	@Test(enabled = true, priority = 2)
 	public  void selectLanguageTest() {
 		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"org.khanacademy.android:id/content_root\")).getChildByText(new UiSelector().className(\"android.widget.TextView\"),\"Select language\")").click();
 		driver.findElementByAndroidUIAutomator("new UiSelector().className(\"android.widget.TextView\").text(\"English\")").click();
 		
 		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"org.khanacademy.android:id/language_options\")).getChildByText(new UiSelector().className(\"android.widget.TextView\"),\"English\")").click();
 		
-	AndroidElement radioEng = driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"org.khanacademy.android:id/language_options\")).getChildByText(new UiSelector().className(\"android.widget.TextView\"),\"English\").instance(1)");
-		System.out.println(radioEng);
+		//	AndroidElement radioEng = driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"org.khanacademy.android:id/language_options\")).getChildByText(new UiSelector().className(\"android.widget.TextView\"),\"English\").instance(1)");
+		//	System.out.println(radioEng);	
+		try {
+			Thread.sleep(4000);
+		} catch(Exception e) {
+			System.out.println(" : " + e);
+		}
 		
+		driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]")).click();
+
 	}
 	
 	@Test(enabled = false)
 	public  void selectSoundEffectTest() {
 		driver.findElementByXPath("//android.widget.ImageView[@content-desc=\"Settings\"]").click();
 	}
-	
-	
-	
-	
-	
 	
 	
 	@AfterTest
