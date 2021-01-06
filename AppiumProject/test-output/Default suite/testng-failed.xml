@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testsuites.FirstTest">
+      <class name="testsuites.KhanTest">
         <methods>
           <include name="setUp"/>
-          <include name="oneTest"/>
+          <include name="signInTest"/>
+          <include name="dismissAlert"/>
         </methods>
-      </class> <!-- testsuites.FirstTest -->
+      </class> <!-- testsuites.KhanTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

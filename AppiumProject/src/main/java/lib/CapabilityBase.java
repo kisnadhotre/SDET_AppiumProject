@@ -83,7 +83,7 @@ public class CapabilityBase {
 		
 		//appPackage = prop.getProperty(appPackage);
 		//appActivity = prop.getProperty(appActivity);
-		//deviceName = prop.getProperty(deviceName);
+		deviceName = "sdk_gphone_x86";
 		//ChromeDriverPath = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";		
 		//platformName = prop.getProperty(platformName);
 				
@@ -100,8 +100,8 @@ public class CapabilityBase {
 
 		capability.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE, System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe");
 
-		capability.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.androidsample.generalstore");        
-		capability.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.androidsample.generalstore.SplashActivity");
+		capability.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "org.khanacademy.android");        
+		capability.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "org.khanacademy.android.ui.library.MainActivity");
 
 		
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://0.0.0.0:4723/wd/hub"),capability);
